@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <app-toolbar></app-toolbar>
     <router-view/>
+    <app-footer style="position:absolute;z-index:-1;"></app-footer>
   </div>
 </template>
 
 <script>
+import AppFooter from './components/AppFooter'
+import AppToolbar from './components/AppToolbar'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    AppToolbar,
+    AppFooter,
+  }
 }
 </script>
 
@@ -18,6 +25,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
